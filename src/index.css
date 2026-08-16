@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-kiryana-green: #0F6E56;
+  --color-kiryana-green-light: #158b6d;
+  --color-kiryana-green-dark: #0a4d3c;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-urdu: "Noto Sans Arabic", "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans;
+  }
+  
+  .urdu-text {
+    @apply font-urdu;
+    direction: rtl;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-kiryana-green hover:bg-kiryana-green-light text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl border border-gray-100 shadow-sm p-6 transition-all hover:shadow-md;
+  }
+}
